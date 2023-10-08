@@ -1,11 +1,17 @@
 # Audio Classification with Multi-head Classifier
-This repository provides scripts to train and test a multi-head classifier on audio features extracted from SoundNet's pool5, conv6, and conv7 layers.<br>
+This repository provides scripts to train and test a multi-head classifier on audio features extracted from SoundNet's pool5, conv6, and conv7 layers.
+<br>
+<br>
 
 ## Feature Extraction with SoundNet
-Before training or testing the classifier, it's crucial to extract relevant features from your audio files. We employ the SoundNet architecture to extract features from audio data.<br>
+Before training or testing the classifier, it's crucial to extract relevant features from your audio files. We employ the SoundNet architecture to extract features from audio data.
+<br>
+<br>
 
 ## About SoundNet
-SoundNet is a deep convolutional neural network (CNN) architecture that has been trained on a vast amount of supervised and unsupervised data to produce meaningful audio representations.<br>
+SoundNet is a deep convolutional neural network (CNN) architecture that has been trained on a vast amount of supervised and unsupervised data to produce meaningful audio representations.
+<br>
+<br>
 
 ## Environment Settings
 We suggest using [conda](https://docs.conda.io/en/latest/) to manage your packages. You can quickly check or install the required packages from `environment.yaml`.
