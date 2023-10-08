@@ -19,7 +19,7 @@ conda env create -f environment.yaml
 ```
 Install FFMPEG by:
 ```bash
-$ apt install ffmpeg
+apt install ffmpeg
 ```
 Major Depdencies we will use in this hw are: FFMPEG, OpenSMILE, Python, sklearn, pandas, pytorch, librosa
 Download OpenSMILE 3.0 from [here](https://github.com/audeering/opensmile/releases/download/v3.0.0/opensmile-3.0-linux-x64.tar.gz) and extract under the `./tools/` directory:
