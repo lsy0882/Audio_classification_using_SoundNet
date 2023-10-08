@@ -1,6 +1,6 @@
 # Audio Classification with Multi-head Classifier
 This repository provides scripts to train and test a multi-head classifier on audio features extracted from SoundNet's pool5, conv6, and conv7 layers.
-<br>
+
 
 ## Feature Extraction with SoundNet
 Before training or testing the classifier, it's crucial to extract relevant features from your audio files. We employ the SoundNet architecture to extract features from audio data.
