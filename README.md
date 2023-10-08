@@ -1,14 +1,17 @@
 # Audio Classification with Multi-head Classifier
 This repository provides scripts to train and test a multi-head classifier on audio features extracted from SoundNet's pool5, conv6, and conv7 layers.
+<br>
 
 
 ## Feature Extraction with SoundNet
 Before training or testing the classifier, it's crucial to extract relevant features from your audio files. We employ the SoundNet architecture to extract features from audio data.
 <br>
 
+
 ## About SoundNet
 SoundNet is a deep convolutional neural network (CNN) architecture that has been trained on a vast amount of supervised and unsupervised data to produce meaningful audio representations.
 <br>
+
 
 ## Environment Settings
 We suggest using [conda](https://docs.conda.io/en/latest/) to manage your packages. You can quickly check or install the required packages from `environment.yaml`.
@@ -22,6 +25,7 @@ Install FFMPEG by:
 apt install ffmpeg
 ```
 <br>
+
 
 ## Data and Labels
 Please download the data from [AWS S3](https://cmu-11775-vm.s3.amazonaws.com/spring2022/11775_s22_data.zip) with wget. You could also download the data manually from [here](https://www.kaggle.com/competitions/cmu-11775-f23-hw1-audio-based-med/data). Then unzip it and put the videos under "$path_to_this_repo/videos", and labels under "$path_to_this_repo/labels". You can either directly download the data to this folder or in anywhere else then build a [soft link](https://linuxhint.com/create_symbolic_link_ubuntu/)
