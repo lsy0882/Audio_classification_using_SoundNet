@@ -42,6 +42,7 @@ for file in videos/*; do filename=$(basename "$file" .mp4); ffmpeg -y -i "$file"
 
 ## How to Extract Features
 * Note: Ensure that you use the same sampling rate and audio length as specified in the script configurations.
+
 Run the extract_soundnet_feats.py script:
 ```bash
 python extract_soundnet_feats.py --model_path <path_to_soundnet_weights> --input_dir <audio_files_directory> --output_dir <features_output_directory> [--file_ext .mp3] [--feat_layer ""]
@@ -62,12 +63,7 @@ The model comprises of a Multi-head Classifier that contains three individual he
 ## Training the Classifier
 * Note: It's important to prepare your data correctly. The scripts expect features to be stored in specific directories (pool5, conv6, conv7) within the provided feat_dir.
 
-1. Ensure you have the required libraries installed:
-
-```bash
-pip install numpy torch torchvision scikit-learn
-```
-2. Run the script with the necessary arguments:
+1. Run the script with the necessary arguments:
 ```bash
 python train_mlp.py <feat_dir> <feat_dim> <list_videos> <output_file> <feat_appendix> <mode>
 ```
@@ -79,14 +75,13 @@ Arguments:
 - `feat_appendix`: (Optional) File extension of the feature files. Default is .csv.
 - `mode`: (Optional) Mode to run the script in. Choices are train or train_val. Default is train_val.
 
-3. Monitor the training process. After each epoch, the training loss will be printed. If <mode> is set to "train_val", the validation loss will also be displayed.
+2. Monitor the training process. After each epoch, the training loss will be printed. If <mode> is set to "train_val", the validation loss will also be displayed.
 
-4. Once training is complete, the trained model will be saved to the specified <output_file>.
+3. Once training is complete, the trained model will be saved to the specified <output_file>.
 <br>
 
 ## Testing the Classifier
 1. To test the trained model, run the test_mlp.py script:
-
 ```bash
 python test_mlp.py <model_file> <feat_dir> <feat_dim> <list_videos> <output_file> <file_ext>
 ```
