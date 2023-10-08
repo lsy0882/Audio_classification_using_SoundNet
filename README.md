@@ -59,7 +59,9 @@ Arguments:
 Once the feature extraction is complete, you'll find the features stored in the specified output_dir with subdirectories for each layer (pool5, conv6, conv7).<br>
 
 ## Model
-The model comprises of a Multi-head Classifier that contains three individual heads (classifiers) dedicated for each layer: pool5, conv6, and conv7. Each head processes its respective features, makes class predictions, and the combined loss from all heads is used for backpropagation.<br>
+The model comprises of a Multi-head Classifier that contains three individual heads (classifiers) dedicated for each layer: pool5, conv6, and conv7. Each head processes its respective features, makes class predictions, and the combined loss from all heads is used for backpropagation.
+<br>
+<br>
 
 ## Training the Classifier
 * Note: It's important to prepare your data correctly. The scripts expect features to be stored in specific directories (pool5, conv6, conv7) within the provided feat_dir.
@@ -75,8 +77,9 @@ Arguments:
 - `feat_appendix`: (Optional) File extension of the feature files. Default is .csv.
 - `mode`: (Optional) Mode to run the script in. Choices are train or train_val. Default is train_val.
 2. Monitor the training process. After each epoch, the training loss will be printed. If <mode> is set to "train_val", the validation loss will also be displayed.
-3. Once training is complete, the trained model will be saved to the specified <output_file>.<br>
-
+3. Once training is complete, the trained model will be saved to the specified <output_file>.
+<br>
+<br>
 
 ## Testing the Classifier
 1. To test the trained model, run the test_mlp.py script:
